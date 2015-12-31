@@ -1,0 +1,11 @@
+.DS_Store
+.DS_Store?
+.Trashes
+*.mat
+*.txt
+*~
+*.mex*
+*.png
+*.fig
+./data/*
+./doc/*
