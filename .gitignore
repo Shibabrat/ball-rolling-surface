@@ -7,6 +7,7 @@
 *.mex*
 *.png
 *.fig
-./data/
-./doc/
+/data/
+/doc/
 .*
+github_*
