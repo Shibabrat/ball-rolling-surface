@@ -1,6 +1,7 @@
 function plot_rolling_surface
 
-%PLOT_ROLLING_SURFACE plots a surface for the ball rolling problem 
+%PLOT_ROLLING_SURFACE plots the surface on which the ball is rolling under
+%uniform gravity
 
     axesFontName = 'factory';
 %     axesFontName = 'Times New Roman';

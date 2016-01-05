@@ -1,6 +1,6 @@
-function [x,t] = trajGet_ball_rolling(x0,tb,tf,R,OPTIONS)
+function [x,t] = trajGet_ball_rolling(x0,tb,tf,param,OPTIONS)
 
-%        [x,t] = trajGet_ball_rolling(x0,tb,tf,mu,OPTIONS);
+%        [x,t] = trajGet_ball_rolling(x0,tb,tf,param,OPTIONS);
 %
 % This is an integrator for a point in phase space
 %

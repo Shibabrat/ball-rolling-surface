@@ -28,13 +28,13 @@ dydot1 	   = 1;         % to start while loop
 attempt    = 0;         % begin counting number of attempts
 % y0(attempt) = 1;
 
- %constant parameters for the rolling surface 
+%   constant parameters for the rolling surface 
     alpha = 0.07;
     beta = 1.017;
     gamma = 15.103;
     xi = 0.00656;
 %     H0 = 12.065;
-    g = 918;
+    g = 981;
     
     Hx = @(x,y)(2*alpha*x - beta*(x/(sqrt(x^2 + gamma))) - xi*y);
     Hy = @(x,y)(2*alpha*y - beta*(y/(sqrt(y^2 + gamma))) - xi*x);

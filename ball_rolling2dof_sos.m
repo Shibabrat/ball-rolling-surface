@@ -13,8 +13,8 @@ function [stateVarsDot,termEvent, direcEvent] = ...
     beta = 1.017;
     gamma = 15.103;
     xi = 0.00656;
-    H0 = 12.065;
-    g = 918;
+%     H0 = 12.065;
+    g = 981;
 
     %function for the rolling surface 
     Hx = @(x,y)(2*alpha*x - beta*(x/(sqrt(x^2 + gamma))) - xi*y);
@@ -42,14 +42,15 @@ if (nargin < 3 || isempty(flag)) %without event
     
 else
    
-    switch lower(flag)          %with event
+    switch lower(flag)          %with event of intersecting the Poincaré S-O-S
         case 'events'
 
             isterminal = 0;
 
             if abs(t) > 1e-2,   %terminate after waiting for a short time
                 if stateVars(2) > 0,
-                    if -sign(stateVars(4) - stateVars(3)) == 1,
+%                     if -sign(stateVars(4) - stateVars(3)) == 1,   %motion to the right
+                    if sign(stateVars(4) - stateVars(3)) == 1,      %motion to the left
                         isterminal = 1;  
                     end
                 end

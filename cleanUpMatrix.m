@@ -1,6 +1,6 @@
 function A = cleanUpMatrix(A)
 
-%        A = cleanUpMatrix(A) ;
+%        A = CLEANUPMATRIX(A) ;
 %
 % Remove all entries in matrix A with absolute value smaller than TOL
 % where TOL is set inside cleanUpMatrix.m

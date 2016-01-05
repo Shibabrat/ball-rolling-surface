@@ -53,7 +53,6 @@ function plot_hills_region_rolling_ball(energyVal)
 
     mesh(xMesh, yMesh, eMesh/max(max(eMesh)), colorMapHillsReg)
     
-    
     shading flat
     view(0,90)
     xlabel('$x$','Interpreter','Latex');

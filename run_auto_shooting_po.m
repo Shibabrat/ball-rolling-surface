@@ -8,7 +8,7 @@ beta = 1.017;
 gamma = 15.103;
 xi = 0.00656;
 H0 = 12.065;
-g = 918;
+g = 981;
 
 %function for the rolling surface 
 % H = @(x,y)(alpha*(x^2 + y^2) - ...

@@ -16,3 +16,4 @@ plot(energyTubeTraj-energyTube)
 
 xlabel('$\#$ trajectories','fontsize',18);
 ylabel('$E_{trajectories} - E_{target}$','fontsize',18)
+

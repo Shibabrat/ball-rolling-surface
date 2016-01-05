@@ -189,13 +189,13 @@ function [xW,x0W] = poManiLocal_ball_rolling(x0po,T,frac, ...
 %         [x,t,te,xe,ie] = get_traj_sos_boatPR(x0W_all(mfrac,1:N)',tb,tf,param,OPTIONS,eventSwitch,numTimesteps);
         [x,t,te,xe,ie] = get_traj_sos_ball_rolling(x0W_all(mfrac,1:N)',tb,tf,OPTIONS,eventSwitch);
 %         plot( x(:,1), x(:,2),colormfd);
-        plot3(x(:,1), x(:,2), x(:,4), ['-',colormfd]);
+        plot3(x(:,1), x(:,2), x(:,3), ['-',colormfd]);
         
         if mfd_traj==1, 
            hold on;grid on;
            xlabel('$x$','interpreter','latex','fontsize',20);
            ylabel('$y$','interpreter','latex','fontsize',20);
-           zlabel('$v_y$','interpreter','latex','fontsize',20);
+           zlabel('$v_x$','interpreter','latex','fontsize',20);
         end
         x0W(mfd_traj,1:N)=x0W_all(mfrac,1:N) ;
         xW = [xW; x];

@@ -23,10 +23,6 @@ function PHIdot = varEqns_ball_rolling(t,PHI)
 %-----------------------------------------------------------
 % Shane Ross (revised 2.19.04)
 % Shibabrat Naik (added pitch-roll ship model: 2014-May-20)
-
-    R = 1.6;
-    
-% R: Ratio of pitch and roll frequencies
     
     x(1:4) = PHI(17:20);
     phi  = reshape(PHI(1:16),4,4);
@@ -40,7 +36,7 @@ function PHIdot = varEqns_ball_rolling(t,PHI)
     gamma = 15.103;
     xi = 0.00656;
     H0 = 12.065;
-    g = 918;
+    g = 981;
 
     %function for the rolling surface 
     xe = x(1);

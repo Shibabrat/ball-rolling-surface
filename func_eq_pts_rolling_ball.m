@@ -1,13 +1,23 @@
 function [eqPt] = func_eq_pts_rolling_ball(eqNum)
 
 %FUNC_EQ_PTS_ROLLING_BALL solves the saddle center equilibrium point for
-%the ball rolling on a surface.
+%   the ball rolling on a surface under uniform gravity. 
 %
-%   output:
-%   eqPts = position [x y] of equilibrium point
+%   [eqPt] = FUNC_EQ_PTS_ROLLING_BALL(eqNum) returns the equilibrium point
+%   eqPt as (x, y) 2-tuple in the configuration space for the equilibrium
+%   point indexed eqNum
+%--------------------------------------------------------------------------
+%   BALL ROLLING ON THE SURFACE CONVENTION:
 %
-%   input:
-%   eqNum = the number of the equilibrium point of interest
+%    2nd quadrant   L12(EQNUM=3)    1st quadrant
+%
+%
+%     L23(EQNUM=4)                  L41(EQNUM=2)
+%
+%
+%    3rd quadrant   L34(EQNUM=1)    4th quadrant
+%
+%--------------------------------------------------------------------------
 % 
 %   Shibabrat Naik (25-Nov-2015)
 %   
@@ -15,13 +25,13 @@ function [eqPt] = func_eq_pts_rolling_ball(eqNum)
     %fix the equilibrium point numbering convention here and make a
     %starting guess at the solution
     if 	eqNum == 1, 
-        x0 = [0; -5];   % L1  
+        x0 = [0; -5];   % L34  
     elseif 	eqNum == 2, 
-        x0 = [5; 0];    % L2
+        x0 = [5; 0];    % L41
     elseif 	eqNum == 3, 
-        x0 = [0; 5];    % L3
+        x0 = [0; 5];    % L12
     elseif 	eqNum == 4, 
-        x0 = [-5; 0];   % L4
+        x0 = [-5; 0];   % L23
     end
     
     %F(xEq) = 0 at the equilibrium point, solve using in-built function
